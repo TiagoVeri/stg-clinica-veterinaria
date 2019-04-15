@@ -3,10 +3,12 @@ package guru.springframework.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import guru.springframework.model.Vet;
-import guru.springframework.services.CrudService;
 import guru.springframework.services.VetService;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService{
 
 	@Override

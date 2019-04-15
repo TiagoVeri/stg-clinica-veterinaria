@@ -1,24 +1,23 @@
 package guru.springframework.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
 import guru.springframework.model.Owner;
 import guru.springframework.model.Vet;
 import guru.springframework.services.OwnerService;
 import guru.springframework.services.VetService;
-import guru.springframework.services.map.OwnerServiceMap;
-import guru.springframework.services.map.VetServiceMap;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	
-	public DataLoader() {
-		ownerService = new OwnerServiceMap();
-		vetService = new VetServiceMap();
+	public DataLoader(OwnerService ownerService, VetService vetService) {
+		this.ownerService = ownerService;
+		this.vetService = vetService;
 	}
-	
 
 	@Override
 	public void run(String... args) throws Exception {
