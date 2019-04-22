@@ -7,13 +7,13 @@
 <body>
 	<h2 th:text= "'Lista de Donos'">Lista de Donos</h2>
 	<table class="table table-striped">
-		<thread>
+		<thead>
 		<tr>
 			<th style="width: 150px;">Id</th>
 			<th style="width: 150px;">First Name</th>
 			<th style="width: 150px;">Last Name</th>
 		</tr>
-		</thread>
+		</thead>
 		<tbody>
 		<tr th:each="owner : ${owners}">
 			<td th:text="${owner.id}">1</td>
