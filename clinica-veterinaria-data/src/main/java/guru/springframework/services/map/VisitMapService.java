@@ -13,12 +13,6 @@ import guru.springframework.services.VisitService;
 @Service
 public class VisitMapService extends AbstractMapService<Visit, Long> implements VisitService{
 
-	private final SpecialtyService specialtyService;
-	
-	public VisitMapService(SpecialtyService specialtyService) {
-		this.specialtyService = specialtyService;
-	}
-
 	@Override
 	public Set<Visit> findAll(){
 		return super.findAll();
