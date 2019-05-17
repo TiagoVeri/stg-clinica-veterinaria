@@ -48,7 +48,7 @@ public class OwnerController {
 		}
 		
 		//Ache owners pelo lastName
-		List<Owner> results = ownerService.findAllByLastNameLike(owner.getLastName());
+		List<Owner> results = ownerService.findAllByLastNameLike("%" + owner.getLastName() + "%");
 		
 		if(results.isEmpty()) {
 			//owners não encontrado
